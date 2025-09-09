@@ -10,7 +10,7 @@ Nebula is like a VPN that connects computers together. No ports need to be opene
 4. create a user using the DSM GUI. Control Panel, “User & Group” ↦ “Create” and set nebula as the username 
 5. The password should be long and random, but will not be needed later, and no application or service permissions are needed
 6. Give the user all of the rights on the new shared folder
-7. Download the installer: run `curl -L https://github.com/malt3/synology-nebula/archive/refs/tags/v1.0.0.tar.gz | tar xz --strip-components=1` in the shared folder
+7. Download the installer: run `curl -L https://github.com/iamwacko/synology-nebula/archive/refs/tags/v1.0.0.tar.gz | tar xz --strip-components=1` in the shared folder
 8. Get Nebula configuration file (generate one if it's your own mesh, or ask if you aren't admin), and place it at `config/config.yml` in the shared folder
 9. Run the installer. `sudo sh install.sh`
 10. `ip a show dev nebula` should show a VPN interface
