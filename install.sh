@@ -6,17 +6,7 @@ if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root" 1>&2
    exit 1
 fi
-if id "$UNIX_USER" &>/dev/null; then
-    echo "$UNIX_USER user exists"
-else
-    echo "You have to create an account for $UNIX_USER using the web GUI first! Aborting."
-    exit 1
-fi
 INSTALL_DIR=$(dirname $(readlink -f "$0"))
-if [ ! -f "${INSTALL_DIR}/config/config.yml" ]; then
-    echo "Config file in \"${INSTALL_DIR}/config/config.yml\" does not exist! Place a valid nebula configuration at this location and re-execute the installer."
-    exit 1
-fi
 ARCHITECTURE=""
 case $(uname -m) in
     i386)    ARCHITECTURE="386" ;;
